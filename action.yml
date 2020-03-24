@@ -1,0 +1,11 @@
+name: Action Template
+author: Mathrix Education SA
+description: GitHub Action TypeScript boilerplate.
+branding:
+  color: blue # white, yellow, blue, green, orange, red, purple, or gray-dark
+  icon: upload-cloud # See https://feathericons.com/ for complete list
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs: {}
+outputs: {}
