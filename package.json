@@ -1,6 +1,6 @@
 {
   "name": "@mathrix-education/action-template",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "TypeScript GitHub Action boilerplate",
   "keywords": [
     "github-actions",
@@ -23,25 +23,28 @@
   "scripts": {
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint --fix \"src/**\"",
-    "build": "ncc build src/index.ts"
+    "clean": "rimraf dist/*",
+    "build": "npm run clean && ncc build --source-map --no-source-map-register src/index.ts"
   },
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@actions/exec": "^1.0.3",
-    "@actions/tool-cache": "^1.3.3",
-    "typescript": "^3.8.3"
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/tool-cache": "^1.5.5",
+    "source-map-support": "^0.5.19"
   },
   "devDependencies": {
-    "@types/node": "^13.9.3",
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "@zeit/ncc": "^0.22.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.3",
-    "prettier": "^1.19.1",
-    "ts-node": "^8.8.1"
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "@zeit/ncc": "^0.22.3",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
   },
   "private": true
 }
